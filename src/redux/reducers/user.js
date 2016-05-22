@@ -9,8 +9,9 @@ export default function(state = initialState, action){
     let type = action.type
     let nstate = {}
     switch(type){
-        case constants.RECEIVED_CURRENT_USER:
+        case constants.LOGGED_IN_USER:
             nstate = assign({}, state, payload.user);
+            console.log('nstate', nstate)
             return nstate;
         break;
 
